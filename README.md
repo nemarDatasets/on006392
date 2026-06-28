@@ -1,3 +1,5 @@
+[![DOI](https://img.shields.io/badge/DOI-10.82901%2Fnemar.on006392-blue)](https://doi.org/10.82901/nemar.on006392)
+
 # BIDS example with HED-SCORE schema library annotations
 
 The HED schema library for the Standardized Computer-based Organized Reporting of EEG (SCORE) can be used to add annotations for BIDS datasets. The annotations are machine readable and validated with the BIDS and HED validators. 
