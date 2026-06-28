@@ -1,38 +1,91 @@
 {
   "version": "2.0",
-  "dataset_id": "on006392",
-  "source": "openneuro",
-  "source_id": "ds006392",
+  "pipeline_stage": "validated",
   "title": "HED schema library for SCORE annotations example",
+  "license": "CC0",
+  "dataset_type": "raw",
   "authors": {
     "Tal Pal Attia": {},
     "Kay Robbins": {},
     "Dora Hermes": {}
   },
-  "license": "CC0",
-  "dataset_type": "raw",
   "related_identifiers": [
     {
       "identifier": "10.18112/openneuro.ds006392.v1.0.1",
       "identifier_type": "DOI",
-      "relation_type": "IsIdenticalTo"
+      "relation_type": "IsDerivedFrom"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/on006392",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/on006392",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "10.48550/arXiv.2310.15173",
+      "identifier_type": "DOI",
+      "relation_type": "IsDescribedBy"
     }
-  ],
-  "pipeline_stage": "seeded",
-  "bids_version": "1.9.0",
-  "recording_modality": [
-    "ieeg"
-  ],
-  "datatypes": [
-    "ieeg"
   ],
   "funding_references": [
     {
-      "funder_name": "National Institute of Health Grant R01MH126700 (SM)"
+      "funder_name": "National Institute of Health",
+      "award_number": "R01MH126700"
     },
     {
-      "funder_name": "National Institute of Health Grant R01MH122258 (DH)"
+      "funder_name": "National Institute of Health",
+      "award_number": "R01MH122258"
     }
   ],
-  "acknowledgements": "Kay Robbins, Dung Truong, Arnaud Delorme, and Scott Makeig"
+  "modalities": [
+    "ieeg"
+  ],
+  "resource_type_specific": "iEEG Dataset",
+  "sizes": [
+    "33.6 MB (583 files)"
+  ],
+  "formats": [
+    ".json",
+    ".md",
+    ".tdat",
+    ".tidx",
+    ".tmet",
+    ".tsv",
+    ".yml"
+  ],
+  "description": "This BIDS dataset demonstrates the application of the Hierarchical Event Descriptor (HED) schema library for Standardized Computer-based Organized Reporting of EEG (SCORE) to annotate intracranial EEG recordings. The dataset contains iEEG data from a single subject acquired during clinical photic stimulation at Mayo Clinic Rochester, with machine-readable event annotations validated against both BIDS and HED standards. This example illustrates best practices for FAIR data annotation in neuroimaging research using structured, hierarchical event descriptors.",
+  "methods_description": "Intracranial EEG data were collected from one subject during clinical photic stimulation at Mayo Clinic Rochester, MN. Events are annotated using HED-SCORE schema library tags recorded in _events.tsv files with corresponding definitions in _events.json sidecars.",
+  "keywords": [
+    {
+      "term": "iEEG"
+    },
+    {
+      "term": "intracranial electroencephalography"
+    },
+    {
+      "term": "event annotation"
+    },
+    {
+      "term": "Hierarchical Event Descriptors"
+    },
+    {
+      "term": "BIDS"
+    },
+    {
+      "term": "SCORE"
+    },
+    {
+      "term": "Photic Stimulation",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D010775"
+    },
+    {
+      "term": "data standardization"
+    }
+  ],
+  "source_hash": "58da0029e676f7dc6db0655b4770c52062c4674e81b9ed1eea59c7e9f3d29247"
 }
