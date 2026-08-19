@@ -1,7 +1,9 @@
 {
   "version": "2.0",
-  "pipeline_stage": "validated",
+  "pipeline_stage": "enriched",
   "title": "HED schema library for SCORE annotations example",
+  "description": "This BIDS example dataset contains intracranial EEG (iEEG) recordings from a single subject collected during clinical photic stimulation at Mayo Clinic. It demonstrates the use of the HED-SCORE (Standardized Computer-based Organized Reporting of EEG) schema library for annotating events in a machine-readable, BIDS- and HED-validated format, supporting standardized event annotation practices in EEG/iEEG research.",
+  "methods_description": "Intracranial EEG data were collected from one subject during clinical photic stimulation at Mayo Clinic, Rochester, MN, under IRB approval (IRB#: 15-006530). Events were annotated using the HED-SCORE schema library, with annotation columns added to the _events.tsv files and corresponding HED tag definitions provided in the _events.json sidecar files.",
   "license": "CC0",
   "dataset_type": "raw",
   "authors": {
@@ -9,6 +11,39 @@
     "Kay Robbins": {},
     "Dora Hermes": {}
   },
+  "keywords": [
+    {
+      "term": "iEEG"
+    },
+    {
+      "term": "Electroencephalography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
+    },
+    {
+      "term": "Hierarchical Event Descriptors"
+    },
+    {
+      "term": "HED-SCORE schema"
+    },
+    {
+      "term": "SCORE"
+    },
+    {
+      "term": "clinical EEG"
+    },
+    {
+      "term": "Photic Stimulation",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D010775"
+    },
+    {
+      "term": "event annotation"
+    },
+    {
+      "term": "BIDS"
+    }
+  ],
   "related_identifiers": [
     {
       "identifier": "10.18112/openneuro.ds006392.v1.0.1",
@@ -24,11 +59,6 @@
       "identifier": "https://nemar.org/dataset/on006392",
       "identifier_type": "URL",
       "relation_type": "IsDescribedBy"
-    },
-    {
-      "identifier": "10.48550/arXiv.2310.15173",
-      "identifier_type": "DOI",
-      "relation_type": "IsDescribedBy"
     }
   ],
   "funding_references": [
@@ -41,10 +71,10 @@
       "award_number": "R01MH122258"
     }
   ],
+  "resource_type_specific": "iEEG Dataset",
   "modalities": [
     "ieeg"
   ],
-  "resource_type_specific": "iEEG Dataset",
   "sizes": [
     "33.6 MB (583 files)"
   ],
@@ -56,36 +86,6 @@
     ".tmet",
     ".tsv",
     ".yml"
-  ],
-  "description": "This BIDS dataset demonstrates the application of the Hierarchical Event Descriptor (HED) schema library for Standardized Computer-based Organized Reporting of EEG (SCORE) to annotate intracranial EEG recordings. The dataset contains iEEG data from a single subject acquired during clinical photic stimulation at Mayo Clinic Rochester, with machine-readable event annotations validated against both BIDS and HED standards. This example illustrates best practices for FAIR data annotation in neuroimaging research using structured, hierarchical event descriptors.",
-  "methods_description": "Intracranial EEG data were collected from one subject during clinical photic stimulation at Mayo Clinic Rochester, MN. Events are annotated using HED-SCORE schema library tags recorded in _events.tsv files with corresponding definitions in _events.json sidecars.",
-  "keywords": [
-    {
-      "term": "iEEG"
-    },
-    {
-      "term": "intracranial electroencephalography"
-    },
-    {
-      "term": "event annotation"
-    },
-    {
-      "term": "Hierarchical Event Descriptors"
-    },
-    {
-      "term": "BIDS"
-    },
-    {
-      "term": "SCORE"
-    },
-    {
-      "term": "Photic Stimulation",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D010775"
-    },
-    {
-      "term": "data standardization"
-    }
   ],
   "source_hash": "58da0029e676f7dc6db0655b4770c52062c4674e81b9ed1eea59c7e9f3d29247"
 }
