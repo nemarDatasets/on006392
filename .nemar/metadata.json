@@ -1,9 +1,9 @@
 {
   "version": "2.0",
-  "pipeline_stage": "enriched",
+  "pipeline_stage": "validated",
   "title": "HED schema library for SCORE annotations example",
-  "description": "This BIDS example dataset contains intracranial EEG (iEEG) recordings from a single subject collected during clinical photic stimulation at Mayo Clinic. It demonstrates the use of the HED-SCORE (Standardized Computer-based Organized Reporting of EEG) schema library for annotating events in a machine-readable, BIDS- and HED-validated format, supporting standardized event annotation practices in EEG/iEEG research.",
-  "methods_description": "Intracranial EEG data were collected from one subject during clinical photic stimulation at Mayo Clinic, Rochester, MN, under IRB approval (IRB#: 15-006530). Events were annotated using the HED-SCORE schema library, with annotation columns added to the _events.tsv files and corresponding HED tag definitions provided in the _events.json sidecar files.",
+  "description": "A BIDS example dataset demonstrating annotation of intracranial EEG (iEEG) recordings with the HED schema library for SCORE (Standardized Computer-based Organized Reporting of EEG). It contains iEEG data from one subject recorded during clinical photic stimulation at Mayo Clinic. Events are annotated through an events.tsv column whose levels are defined as HED tags in the events.json sidecar, yielding machine-readable annotations validated with the BIDS and HED validators.",
+  "methods_description": "Intracranial EEG was recorded from one subject during clinical photic stimulation at Mayo Clinic Rochester, MN. Events were annotated with HED-SCORE tags via an annotation column in _events.tsv, with tag definitions in the _events.json sidecar.",
   "license": "CC0",
   "dataset_type": "raw",
   "authors": {
@@ -13,35 +13,27 @@
   },
   "keywords": [
     {
-      "term": "iEEG"
-    },
-    {
-      "term": "Electroencephalography",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
+      "term": "intracranial EEG"
     },
     {
       "term": "Hierarchical Event Descriptors"
     },
     {
-      "term": "HED-SCORE schema"
+      "term": "HED"
     },
     {
       "term": "SCORE"
     },
     {
-      "term": "clinical EEG"
-    },
-    {
-      "term": "Photic Stimulation",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D010775"
-    },
-    {
-      "term": "event annotation"
+      "term": "photic stimulation"
     },
     {
       "term": "BIDS"
+    },
+    {
+      "term": "Electroencephalography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
     }
   ],
   "related_identifiers": [
@@ -63,11 +55,11 @@
   ],
   "funding_references": [
     {
-      "funder_name": "National Institute of Health",
+      "funder_name": "National Institutes of Health",
       "award_number": "R01MH126700"
     },
     {
-      "funder_name": "National Institute of Health",
+      "funder_name": "National Institutes of Health",
       "award_number": "R01MH122258"
     }
   ],
@@ -76,7 +68,7 @@
     "ieeg"
   ],
   "sizes": [
-    "33.6 MB (583 files)"
+    "32.03 MB (583 files)"
   ],
   "formats": [
     ".json",
