@@ -22,6 +22,12 @@ Dora Hermes: hermes.dora@mayo.edu
 
 ## Channels table generated from the data header (18 Oct 2026)
 
-1 recording(s) had no channels.tsv, which BIDS requires for iEEG (bids-validator and `mne_bids` could not attach channel types or units). `sub-ieegModulator_ses-ieeg01_task-photicstim_run-01_channels.tsv` now lists the 194 channels of the MEF 3 channel directories (`<name>.timd`, ordered by acquisition_channel_number) and their `.tmet` metadata (sampling frequency, units): names and sampling frequency from the header, units from the header, type from the name (ECG/EMG/EOG/trigger) or, for contacts listed in electrodes.tsv, the iEEG type of the *_ieeg.json channel counts, scalp 10-20 labels not in electrodes.tsv EEG, otherwise MISC (types: ECG 1, EEG 21, SEEG 172); status n/a (no former status exists).
+1 recording(s) had no channels.tsv, which BIDS requires for iEEG (bids-validator and `mne_bids` could not attach channel types or units). `sub-ieegModulator_ses-ieeg01_task-photicstim_run-01_channels.tsv` now lists the 194 channels of the MEF 3 channel directories (`<name>.timd`; rows first in acquisition_channel_number order, reordered on 19 Oct 2026, see below) and their `.tmet` metadata (sampling frequency, units): names and sampling frequency from the header, units from the header, type from the name (ECG/EMG/EOG/trigger) or, for contacts listed in electrodes.tsv, the iEEG type of the *_ieeg.json channel counts, scalp 10-20 labels not in electrodes.tsv EEG, otherwise MISC (types: ECG 1, EEG 21, SEEG 172); status n/a (no former status exists).
 
 Note: `sub-ieegModulator_ses-ieeg01_task-photicstim_run-01_ieeg.json` channel counts set to the generated channels.tsv: SEEGChannelCount 166 -> 172.
+
+## Channel order of the MEF 3 recordings (19 Oct 2026)
+
+The rows of the channels.tsv of the MEF 3 recordings were in acquisition order (`acquisition_channel_number` of each channel's `.tmet`). The MEF 3 readers return the channels sorted by name: pymef's session metadata, and MNE's `read_raw_mef`, which takes its order from pymef. This order does not depend on the order of the channel directories on disk: a copy with the `.timd` directories created in reverse order is read in the same order. `mne_bids.read_raw_bids` (0.20) therefore stopped with "Channel mismatch between channels.tsv and the raw data file" unless called with `on_ch_mismatch='reorder'`. The rows are now in the reader's order (sorted by channel name). Every row is unchanged; only the order changed. The acquisition order is still available from `acquisition_channel_number` in the `.tmet` files.
+
+Files: `sub-ieegModulator_ses-ieeg01_task-photicstim_run-01_channels.tsv`.
