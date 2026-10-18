@@ -14,7 +14,7 @@
 	},
 	"Manufacturer": "Natus",
 	"InstitutionName": "Mayo Clinic",
-	"SEEGChannelCount": 166,
+	"SEEGChannelCount": 172,
 	"RecordingDuration": 865.235,
 	"RecordingType": "continuous",
 	"iEEGReference": "subgaleal"

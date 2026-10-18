@@ -1,3 +1,7 @@
+Unreleased 2026-10-18
+  - channels.tsv generated for 1 recording(s) without one, from the data header and electrodes.tsv (194 channels: ECG 1, EEG 21, SEEG 172).
+  - README: section 'Channels table generated from the data header'.
+
 1.0.1 2025-06-25
   - Version 1, minor update
 1.0.0 2025-06-25
