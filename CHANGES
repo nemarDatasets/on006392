@@ -1,8 +1,6 @@
-Unreleased 2026-10-19
+1.0.2 2026-10-22
   - channels.tsv of the 1 MEF 3 recording(s): rows in the order the MEF 3 readers (pymef, MNE read_raw_mef) return the channels, sorted by name, instead of acquisition order; mne_bids read_raw_bids stopped with "Channel mismatch" before. Rows unchanged.
   - README: section 'Channel order of the MEF 3 recordings'.
-
-Unreleased 2026-10-18
   - channels.tsv generated for 1 recording(s) without one, from the data header and electrodes.tsv (194 channels: ECG 1, EEG 21, SEEG 172).
   - README: section 'Channels table generated from the data header'.
 
